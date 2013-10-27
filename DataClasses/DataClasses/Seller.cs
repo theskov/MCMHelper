@@ -10,7 +10,10 @@ namespace Shared.DataClasses
     {
         public string Name;
         public string Nationality;
+        public int Transactions;
         public SellerRating Rating;
+        public IEnumerable<SellerAttributes> Attributes;
+        public decimal LossPercentage;
     }
 
     public enum SellerRating
@@ -21,4 +24,15 @@ namespace Shared.DataClasses
         VeryGood,
         Outstanding
     }
+
+    public enum SellerAttributes
+    {
+        VeryFastShipping,
+        FastShipping,
+        UntrackedNotEligible,
+        UntrackedOnlyUpTo10,
+        Professional,
+        FreeFoil
+    }
+
 }
